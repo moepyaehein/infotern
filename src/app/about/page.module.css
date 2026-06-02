@@ -1,0 +1,263 @@
+.page {
+  padding-bottom: var(--space-20);
+}
+
+.hero {
+  position: relative;
+  min-height: 360px;
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: var(--space-12);
+  padding: var(--space-16) max(var(--space-6), calc((100vw - var(--max-width)) / 2));
+  background-image:
+    linear-gradient(90deg, rgba(3, 30, 35, 0.84), rgba(4, 61, 68, 0.34)),
+    linear-gradient(180deg, rgba(184, 135, 47, 0.15), transparent 42%),
+    url('/uit-campus.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 5px;
+  background: linear-gradient(90deg, var(--text-accent), var(--accent-gold), var(--text-accent));
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+  max-width: 760px;
+}
+
+.heroEyebrow {
+  margin-bottom: var(--space-3);
+  color: #f3dfbd;
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-medium);
+}
+
+.heroTitle {
+  color: #ffffff;
+  font-family: var(--font-display);
+  font-size: var(--fs-5xl);
+  font-weight: var(--fw-extrabold);
+  line-height: var(--lh-tight);
+}
+
+.heroSubtitle {
+  max-width: 650px;
+  margin-top: var(--space-4);
+  color: rgba(255, 255, 255, 0.88);
+  font-size: var(--fs-lg);
+  line-height: var(--lh-relaxed);
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-6);
+  margin-bottom: var(--space-16);
+}
+
+.card {
+  padding: var(--space-8);
+  border: 1px solid rgba(191, 211, 212, 0.78);
+  border-top: 3px solid var(--text-accent);
+  border-radius: var(--radius-lg);
+  background: var(--gradient-card);
+  box-shadow: var(--shadow-sm);
+}
+
+.cardTitle {
+  margin-bottom: var(--space-6);
+  color: var(--text-primary);
+  font-size: var(--fs-xl);
+  font-family: var(--font-display);
+  font-weight: var(--fw-extrabold);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.list li {
+  position: relative;
+  padding-left: var(--space-5);
+  color: var(--text-secondary);
+  font-size: var(--fs-sm);
+  line-height: var(--lh-relaxed);
+}
+
+.list li::before {
+  content: '';
+  position: absolute;
+  top: 0.68em;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent-gold);
+}
+
+.section {
+  padding: var(--space-16) 0;
+}
+
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+}
+
+.featureCard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  min-height: 180px;
+  padding: var(--space-6);
+  border: 1px solid rgba(191, 211, 212, 0.78);
+  border-radius: var(--radius-lg);
+  background: var(--gradient-card);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-base);
+}
+
+.featureCard:hover {
+  border-color: var(--border-accent);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.featureCard h3 {
+  color: var(--text-primary);
+  font-size: var(--fs-base);
+  font-family: var(--font-display);
+  font-weight: var(--fw-extrabold);
+}
+
+.featureCard p {
+  color: var(--text-secondary);
+  font-size: var(--fs-sm);
+  line-height: var(--lh-relaxed);
+}
+
+.majorsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4);
+  margin-top: var(--space-10);
+}
+
+.majorCard {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+  padding: var(--space-5) var(--space-6);
+  border: 1px solid rgba(191, 211, 212, 0.78);
+  border-radius: var(--radius-lg);
+  background: var(--gradient-card);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-base);
+}
+
+.majorCard:hover {
+  border-color: var(--border-accent);
+  background: var(--bg-glass-hover);
+  transform: translateY(-2px);
+}
+
+.majorCode {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-sm);
+  background: rgba(8, 121, 132, 0.1);
+  color: var(--text-accent);
+  font-weight: var(--fw-bold);
+}
+
+.majorName {
+  color: var(--text-primary);
+  font-size: var(--fs-base);
+  font-family: var(--font-display);
+  font-weight: var(--fw-extrabold);
+}
+
+.majorDesc {
+  margin-top: var(--space-1);
+  color: var(--text-muted);
+  font-size: var(--fs-xs);
+  line-height: var(--lh-relaxed);
+}
+
+.cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-5);
+  padding: var(--space-12);
+  border: 1px solid var(--border-accent);
+  border-radius: var(--radius-lg);
+  background: var(--gradient-card);
+  text-align: center;
+}
+
+.ctaTitle {
+  color: var(--text-primary);
+  font-size: var(--fs-2xl);
+  font-weight: var(--fw-bold);
+}
+
+.ctaText {
+  max-width: 450px;
+  color: var(--text-secondary);
+  font-size: var(--fs-base);
+}
+
+.ctaButtons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-4);
+}
+
+@media (max-width: 1024px) {
+  .featuresGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 340px;
+    padding: var(--space-12) var(--space-4);
+  }
+
+  .heroTitle {
+    font-size: var(--fs-4xl);
+  }
+
+  .grid2,
+  .majorsGrid,
+  .featuresGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .cta {
+    padding: var(--space-8);
+  }
+
+  .ctaButtons {
+    flex-direction: column;
+    width: 100%;
+  }
+}

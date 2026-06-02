@@ -1,0 +1,207 @@
+.card {
+  background: var(--gradient-card);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(191, 211, 212, 0.78);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  transition: all var(--transition-base);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.card:hover {
+  border-color: var(--border-medium);
+  background: var(--bg-glass-hover);
+  box-shadow: var(--shadow-md);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.reviewerInfo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.reviewerName {
+  font-family: var(--font-display);
+  font-weight: var(--fw-extrabold);
+  font-size: var(--fs-base);
+  color: var(--text-primary);
+}
+
+.reviewerMeta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: var(--fs-xs);
+  color: var(--text-muted);
+}
+
+.companyLink {
+  color: var(--text-accent);
+  font-weight: var(--fw-medium);
+  transition: color var(--transition-fast);
+}
+
+.companyLink:hover {
+  color: var(--accent-purple);
+}
+
+.overallRating {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-bold);
+  color: var(--star-color);
+  flex-shrink: 0;
+}
+
+.ratings {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-3);
+  padding: var(--space-3) 0;
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.ratingItem {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.ratingLabel {
+  font-size: var(--fs-xs);
+  color: var(--text-muted);
+}
+
+.ratingStars {
+  font-size: var(--fs-sm);
+  color: var(--star-color);
+  letter-spacing: 0;
+}
+
+.reviewText {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.prosConsRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+
+.prosSection, .consSection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.prosLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  color: var(--accent-green);
+  text-transform: uppercase;
+  letter-spacing: 0;
+}
+
+.consLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  color: var(--accent-orange);
+  text-transform: uppercase;
+  letter-spacing: 0;
+}
+
+.prosText, .consText {
+  font-size: var(--fs-sm);
+  color: var(--text-secondary);
+  line-height: var(--lh-relaxed);
+}
+
+.tipsSection {
+  background: rgba(37, 150, 164, 0.06);
+  border: 1px solid rgba(37, 150, 164, 0.15);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+}
+
+.tipsLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  color: var(--text-accent);
+  text-transform: uppercase;
+  letter-spacing: 0;
+  margin-bottom: var(--space-2);
+}
+
+.tipsText {
+  font-size: var(--fs-sm);
+  color: var(--text-secondary);
+  line-height: var(--lh-relaxed);
+}
+
+.cardFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: var(--space-2);
+}
+
+.helpfulBtn {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--fs-sm);
+  color: var(--text-muted);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+  cursor: pointer;
+}
+
+.helpfulBtn:hover {
+  color: var(--text-accent);
+  background: rgba(37, 150, 164, 0.08);
+}
+
+.helpfulBtnActive {
+  color: var(--text-accent);
+  background: rgba(37, 150, 164, 0.1);
+}
+
+.date {
+  font-size: var(--fs-xs);
+  color: var(--text-muted);
+}
+
+@media (max-width: 768px) {
+  .ratings {
+    grid-template-columns: 1fr;
+  }
+
+  .prosConsRow {
+    grid-template-columns: 1fr;
+  }
+}
