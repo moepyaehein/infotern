@@ -50,14 +50,14 @@ export default function Navbar() {
     return user ? (
       <div className={styles.authArea}>
         <button className={styles.accountButton} type="button" aria-label="Account menu">
-          <span className={styles.accountAvatar}>{user.email.slice(0, 1).toUpperCase()}</span>
+          <span className={styles.accountAvatar}>U</span>
           <span className={styles.accountText}>
-            <strong>{user.email.split('@')[0]}</strong>
-            <small>{user.isAdmin ? 'Admin' : 'UIT account'}</small>
+            <strong>UIT Account</strong>
+            <small>{user.isAdmin ? 'Admin' : 'Signed in'}</small>
           </span>
         </button>
         <div className={styles.accountMenu}>
-          <span>{user.email}</span>
+          <span>{user.isAdmin ? 'Admin access' : 'UIT email verified'}</span>
           <button className={styles.logoutBtn} type="button" onClick={handleLogout}>
             Logout
           </button>

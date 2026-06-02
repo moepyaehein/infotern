@@ -62,7 +62,7 @@ export default function AuthPage() {
     const email = form.email.trim().toLowerCase();
 
     if (!email.endsWith(UIT_DOMAIN)) {
-      setMessage(`Use your UIT email address, like moepyaehein${UIT_DOMAIN}.`);
+      setMessage(`Use your UIT email address, like student${UIT_DOMAIN}.`);
       return;
     }
 
@@ -152,7 +152,7 @@ export default function AuthPage() {
 
           {user && (
             <div className={styles.currentUser}>
-              Signed in as <strong>{user.email}</strong>
+              You are signed in with a verified UIT account.
             </div>
           )}
 
@@ -176,7 +176,7 @@ export default function AuthPage() {
                 name="email"
                 value={form.email}
                 onChange={updateField}
-                placeholder={`moepyaehein${UIT_DOMAIN}`}
+                placeholder={`student${UIT_DOMAIN}`}
                 autoComplete="email"
                 inputMode="email"
               />
