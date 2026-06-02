@@ -190,11 +190,14 @@
 .priorityIcon {
   display: grid;
   place-items: center;
-  width: 38px;
-  height: 38px;
-  border-radius: var(--radius-sm);
-  background: rgba(8, 121, 132, 0.08);
-  color: var(--text-accent);
+  width: 34px;
+  height: 34px;
+  color: #08737c;
+  border-left: 1px solid rgba(184, 135, 47, 0.42);
+}
+
+.priorityIcon svg {
+  stroke-width: 1.45;
 }
 
 /* --- Size Grid --- */
@@ -318,12 +321,14 @@
 .matchLogo {
   display: grid;
   place-items: center;
-  width: 48px;
-  height: 48px;
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-sm);
-  background: rgba(8, 121, 132, 0.08);
-  color: var(--text-accent);
+  width: 42px;
+  height: 42px;
+  color: #08737c;
+  border-bottom: 1px solid rgba(184, 135, 47, 0.42);
+}
+
+.matchLogo svg {
+  stroke-width: 1.45;
 }
 
 .matchName {

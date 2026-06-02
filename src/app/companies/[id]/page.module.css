@@ -50,17 +50,28 @@
 }
 
 .logoLarge {
-  width: 88px;
-  height: 88px;
+  width: 72px;
+  height: 82px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  background:
-    linear-gradient(145deg, rgba(8, 121, 132, 0.12), rgba(255, 255, 255, 0.78));
-  color: var(--text-accent);
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--border-subtle);
+  justify-content: flex-start;
+  color: #08737c;
   flex-shrink: 0;
+  position: relative;
+}
+
+.logoLarge::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 14px;
+  width: 1px;
+  height: 54px;
+  background: linear-gradient(180deg, transparent, rgba(184, 135, 47, 0.55), transparent);
+}
+
+.logoLarge svg {
+  stroke-width: 1.35;
 }
 
 .headerInfo {

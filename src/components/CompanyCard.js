@@ -8,7 +8,7 @@ export default function CompanyCard({ company }) {
     <Link href={`/companies/${company.id}`} className={styles.card} id={`company-card-${company.id}`}>
       <div className={styles.cardHeader}>
         <div className={styles.cardLogo}>
-          <Icon name={company.logo} size={30} />
+          <Icon name={company.logo} size={28} />
         </div>
         <div className={styles.cardInfo}>
           <h3 className={styles.cardName}>{company.name}</h3>
